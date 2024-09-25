@@ -1,0 +1,71 @@
+﻿@page "/learnblazor/demoproduct"
+
+<h3 class="text-primary">DemoProduct</h3>
+<div class="row">
+
+    @foreach (var prod in ProductList)
+    {
+        <div class="col-6 border p-3">
+            <h4 class="text-secondary">Product - @prod.Id</h4>
+            @prod.Name
+            <br />
+            Show Properties: <input type="checkbox" @bind="@prod.IsActive" />
+            <br />
+
+            @if (prod.IsActive)
+                @foreach (var p in prod.ProductProperties)
+                {
+                    <p>@p.Key - @p.Value</p>
+                }
+            <button class="btn btn-danger" @onclick="() => DeleteProduct(prod.Id)">Delete</button>
+        </div>
+    }
+</div>
+
+
+@code {
+
+    private List<Product> ProductList = new();
+
+    protected override void OnInitialized()
+    {
+        ProductList.Add(new()
+            {
+                Id = 1,
+                Name = "Midnight Blaze",
+                IsActive = false,
+                Price = 5.99,
+                ProductProperties = new List<Product_Prop>()
+                {
+                    new Product_Prop { Id = 1, Key = "Flavor", Value = "Rose"},
+                    new Product_Prop { Id = 2, Key = "Size", Value = "20oz"},
+                    new Product_Prop { Id = 3, Key = "Color", Value="Purple" }
+                }
+            });
+
+        ProductList.Add(new()
+            {
+                Id = 2,
+                Name = "Blossom Lily",
+                IsActive = true,
+                Price = 10.59,
+                ProductProperties = new List<Product_Prop>()
+            {
+                new Product_Prop { Id = 1, Key = "Flavor", Value = "Lily" },
+                new Product_Prop { Id = 2, Key = "Size", Value = "18oz" },
+                new Product_Prop {Id = 3,Key = "Color",Value = "White"}
+            }
+            });
+    }
+
+    private void DeleteProduct(int id)
+    {
+        var prod = ProductList.Find(x => x.Id == id);
+        if (prod is not null)
+        {
+            ProductList.Remove(prod);
+            
+
+        }
+    }
+}
