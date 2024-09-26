@@ -1,30 +1,20 @@
 ﻿@page "/learnblazor/demoproduct"
 
 <h3 class="text-primary">DemoProduct</h3>
+<p>Favorite Count: @FavoriteCount</p>
+<p>Selected Product: @SelectedProduct</p>
 <div class="row">
 
     @foreach (var prod in ProductList)
-    {
-        <div class="col-6 border p-3">
-            <h4 class="text-secondary">Product - @prod.Id</h4>
-            @prod.Name
-            <br />
-            Show Properties: <input type="checkbox" @bind="@prod.IsActive" />
-            <br />
-
-            @if (prod.IsActive)
-                @foreach (var p in prod.ProductProperties)
-                {
-                    <p>@p.Key - @p.Value</p>
-                }
-            <button class="btn btn-danger" @onclick="() => DeleteProduct(prod.Id)">Delete</button>
-        </div>
+    { 
+        <_ProductComponent Product="prod" OnFavoriteUpdated="UpdateFavoriteCount" OnProductClicked="UpdatedSelectedProduct"></_ProductComponent>
     }
 </div>
 
 
 @code {
-
+    public string SelectedProduct { get; set; }
+    public int FavoriteCount { get; set; } = 0;
     private List<Product> ProductList = new();
 
     protected override void OnInitialized()
@@ -58,14 +48,19 @@
             });
     }
 
-    private void DeleteProduct(int id)
+    protected void UpdateFavoriteCount(bool isSelected)
     {
-        var prod = ProductList.Find(x => x.Id == id);
-        if (prod is not null)
+        if(isSelected)
         {
-            ProductList.Remove(prod);
-            
-
+            FavoriteCount++;
+        } else
+        {
+            FavoriteCount--;
         }
+    }
+
+    protected void UpdatedSelectedProduct(string productName)
+    {
+        SelectedProduct = productName;
     }
 }
