@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Brandon\\src\\LearnBlazor\\LearnBlazor\\LearnBlazor.csproj": {}
+    "C:\\Users\\Brandon\\source\\repos\\LearnBlazor\\LearnBlazor\\LearnBlazor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Brandon\\src\\LearnBlazor\\LearnBlazor\\LearnBlazor.csproj": {
+    "C:\\Users\\Brandon\\source\\repos\\LearnBlazor\\LearnBlazor\\LearnBlazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Brandon\\src\\LearnBlazor\\LearnBlazor\\LearnBlazor.csproj",
+        "projectUniqueName": "C:\\Users\\Brandon\\source\\repos\\LearnBlazor\\LearnBlazor\\LearnBlazor.csproj",
         "projectName": "LearnBlazor",
-        "projectPath": "C:\\Users\\Brandon\\src\\LearnBlazor\\LearnBlazor\\LearnBlazor.csproj",
+        "projectPath": "C:\\Users\\Brandon\\source\\repos\\LearnBlazor\\LearnBlazor\\LearnBlazor.csproj",
         "packagesPath": "C:\\Users\\Brandon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Brandon\\src\\LearnBlazor\\LearnBlazor\\obj\\",
+        "outputPath": "C:\\Users\\Brandon\\source\\repos\\LearnBlazor\\LearnBlazor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -53,7 +53,7 @@
             "Microsoft.AspNetCore.App.Internal.Assets": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.2, )",
+              "version": "[10.0.3, )",
               "autoReferenced": true
             }
           },
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Users\\Brandon\\.dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

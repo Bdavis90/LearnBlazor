@@ -1,0 +1,29 @@
+@rendermode InteractiveServer
+
+<div>
+    <div class="alert alert-info">
+        @Title
+    </div>
+    @if (ChildContent is not null)
+    {
+        <div class="alert alert-success">
+            @ChildContent
+            <br/>
+            @ChildSomeContent
+        </div>
+    }
+    <button class="btn btn-danger" @onclick="OnButtonClicked">Click Me</button>
+</div>
+
+
+@code {
+    [Parameter] 
+    public string Title { get; set; }
+    [Parameter] 
+    public RenderFragment ChildContent { get; set; } // Must be named ChildContent is not using tag in parent
+    [Parameter] 
+    public RenderFragment ChildSomeContent { get; set; } // Must be a tag in the parent
+    [Parameter]
+    public EventCallback OnButtonClicked { get; set; }
+
+}
