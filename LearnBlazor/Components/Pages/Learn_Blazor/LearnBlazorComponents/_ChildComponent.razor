@@ -13,12 +13,17 @@
         </div>
     }
     <button class="btn btn-danger" @onclick="OnButtonClicked">Click Me</button>
+    
+    <_GrandonChildComponent>
+        
+    </_GrandonChildComponent>
 </div>
 
 
 @code {
     [Parameter] 
     public string Title { get; set; }
+    [Parameter] public string MessageForGrandChild { get; set; }
     [Parameter] 
     public RenderFragment ChildContent { get; set; } // Must be named ChildContent is not using tag in parent
     [Parameter] 

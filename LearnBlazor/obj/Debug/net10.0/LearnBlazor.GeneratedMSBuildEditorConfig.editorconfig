@@ -58,6 +58,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMZWFybl9CbGF6b3JcTGVhcm5CbGF6b3JDb21wb25lbnRzXF9EZWxldGVCdXR0b25Db21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Brandon/source/repos/LearnBlazor/LearnBlazor/Components/Pages/Learn_Blazor/LearnBlazorComponents/_GrandonChildComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMZWFybl9CbGF6b3JcTGVhcm5CbGF6b3JDb21wb25lbnRzXF9HcmFuZG9uQ2hpbGRDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Brandon/source/repos/LearnBlazor/LearnBlazor/Components/Pages/Learn_Blazor/LearnBlazorComponents/_IndividualProduct.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMZWFybl9CbGF6b3JcTGVhcm5CbGF6b3JDb21wb25lbnRzXF9JbmRpdmlkdWFsUHJvZHVjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
