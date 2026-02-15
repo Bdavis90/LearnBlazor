@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Components\LearnBlazor\BindProp.razor" />
+      <_ContentIncludedByDefault Remove="Components\LearnBlazor\DemoProduct.razor" />
+      <_ContentIncludedByDefault Remove="Components\Pages\LearnBlazorComponents\_DeleteButtonComponent.razor" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Components\Pages\Learn_Blazor\BindProp.razor" />
+      <AdditionalFiles Include="Components\Pages\Learn_Blazor\DemoProduct.razor" />
+    </ItemGroup>
+
+</Project>
