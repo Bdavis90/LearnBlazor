@@ -1,0 +1,41 @@
+<hr/>
+
+@foreach (var type in EventType)
+{
+    @type
+    <hr/>
+}
+
+@code {
+    [Parameter] 
+    public int CountValue { get; set; }
+    
+    List<string> EventType = new();
+    
+    public override async Task SetParametersAsync(ParameterView parameters)
+    {
+        EventType.Add("SetParametersAsync is called in CHILD");
+        await base.SetParametersAsync(parameters);
+    }
+    
+    protected override  void OnInitialized()
+    {
+        EventType.Add("OnInitialized is called in CHILD");
+    }
+    
+    protected override void OnParametersSet()
+    {
+        EventType.Add("OnParametersSet is called in CHILD");
+    }
+    
+    protected override void OnAfterRender(bool firstRender)
+    {
+        EventType.Add("OnAfterRender is called in CHILD");
+    }
+    
+    protected override bool ShouldRender()
+    {
+        EventType.Add("ShouldRender is called in CHILD");
+        return true;
+    }
+}
